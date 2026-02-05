@@ -78,7 +78,6 @@ jobs:
   image_scan:
     name: Build + scan Docker image
     runs-on: ubuntu-latest
-    if: ${{ hashFiles('Dockerfile') != '' }}
     steps:
       - uses: actions/checkout@v4
 
