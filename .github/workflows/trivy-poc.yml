@@ -89,8 +89,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-trivy-
 
-      - name: Build image
-        run: docker build -t lca-collaboration:poc .
+      - name: Build Docker image
+        run: docker build --build-arg CI=true -t lca-collaboration:poc .
 
       - name: Trivy image scan (SARIF)
         uses: aquasecurity/trivy-action@0.28.0
