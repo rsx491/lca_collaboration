@@ -42,7 +42,7 @@ jobs:
           sarif_file: trivy-fs.sarif
 
       - name: Upload repo scan artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: trivy-fs
           path: trivy-fs.sarif
@@ -70,7 +70,7 @@ jobs:
           output: sbom.cdx.json
 
       - name: Upload SBOM artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: sbom-cyclonedx
           path: sbom.cdx.json
@@ -107,7 +107,7 @@ jobs:
           sarif_file: trivy-image.sarif
 
       - name: Upload image scan artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: trivy-image
           path: trivy-image.sarif
